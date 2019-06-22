@@ -1,21 +1,15 @@
-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+
+import flask
+import cv2
+from flask import Flask, request
+import numpy as np
+
+
+
+# ////////////////////
 
 import argparse
 import sys
@@ -132,8 +126,36 @@ def classifyImage():
   labels = load_labels(label_file)
 
   print('\nEvaluation time (1-image): {:.3f}s\n'.format(end-start))
-  template = "{} (score={:0.5f})"
-  for i in top_k:
-    print(template.format(labels[i], results[i]))
 
-  return top_k
+  template = "{} (score={:0.5f})"
+
+  result = ""
+
+  for i in top_k:
+        result += template.format(labels[i], results[i])
+
+  return result.split(" ")[0]
+
+#-----------------------
+
+app = Flask(__name__)
+
+# request model prediction
+@app.route('/classify', methods=['POST'])
+def classify():
+    # read image from the request
+
+    img = cv2.imdecode(np.frombuffer(request.files['image'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
+
+    cv2.imwrite('tf_files/classify/image.jpeg', img)
+
+    # execute classify command and get result
+
+    result = classifyImage()
+
+    data = {'result': result}
+    return flask.jsonify(data)
+
+
+# start Flask server
+app.run(host='0.0.0.0', port=22666, debug=False)
