@@ -5,12 +5,9 @@ from __future__ import print_function
 import flask
 import cv2
 from flask import Flask, request
+from flask_cors import CORS
+
 import numpy as np
-
-
-
-# ////////////////////
-
 import argparse
 import sys
 import time
@@ -139,13 +136,16 @@ def classifyImage():
 #-----------------------
 
 app = Flask(__name__)
+CORS(app)
+
 
 # request model prediction
 @app.route('/classify', methods=['POST'])
+
 def classify():
     # read image from the request
 
-    img = cv2.imdecode(np.frombuffer(request.files['image'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
+    img = cv2.imdecode(np.frombuffer(request.files['file'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
 
     cv2.imwrite('tf_files/classify/image.jpeg', img)
 
@@ -154,7 +154,10 @@ def classify():
     result = classifyImage()
 
     data = {'result': result}
-    return flask.jsonify(data)
+
+    response = flask.jsonify(data)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 # start Flask server

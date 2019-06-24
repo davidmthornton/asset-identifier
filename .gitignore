@@ -1,11 +1,1 @@
-**/*.pyc
-tf_files
-.idea/
-**/*~
-gradle*
-libs/
-local.properties
-android.iml
-.gradle/
-android/assets/*
-.DS_Store
+tf_files/models/
