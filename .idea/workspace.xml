@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d906dde-f53f-4153-b771-350a6cd7fe9f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/label_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/label_image.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tf_files/classify/image.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/classify/image.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tf_files/retrained_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tf_files/training_summaries/mobilenet_1.0_224/train/events.out.tfevents.1561104312.MacBook-Pro-5.local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tf_files/training_summaries/mobilenet_1.0_224/validation/events.out.tfevents.1561104316.MacBook-Pro-5.local" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +33,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/label_image.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#690#728#0" expanded="true" />
               </folding>
@@ -40,10 +46,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="345">
+              <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -74,6 +89,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>photos</find>
@@ -86,8 +108,8 @@
       <find>__main</find>
       <find>app = f</find>
       <find>form</find>
-      <find>print</find>
       <find>hello</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,12 +120,12 @@
       <list>
         <option value="$PROJECT_DIR$/scripts/label_image.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/scripts/server.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/scripts/server.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="30" />
     <option name="y" value="76" />
     <option name="width" value="1583" />
@@ -125,7 +147,7 @@
             <path>
               <item name="tensorflow-for-poets-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow-for-poets-2" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_files" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,7 +193,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="76" width="1583" height="914" extended-state="0" />
+    <frame x="30" y="76" width="1583" height="914" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29897568" />
@@ -195,9 +217,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/image.jpeg" />
-    <entry file="file://$PROJECT_DIR$/tf_files/classify/image.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/-1199943126/numpy/core/_multiarray_umath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -242,25 +261,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/server.py">
+    <entry file="file://$PROJECT_DIR$/scripts/label_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="353">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#690#728#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tf_files/bottlenecks/lenovo/1-1-1559310701-1559310717.jpg_inception_v3.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/label_image.py">
+    <entry file="file://$PROJECT_DIR$/tf_files/classify/image.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="345">
+          <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
           <folding>
-            <element signature="e#690#728#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

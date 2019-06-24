@@ -153,6 +153,8 @@ def classify():
 
     result = classifyImage()
 
+    print(result)
+
     data = {'result': result}
 
     response = flask.jsonify(data)
